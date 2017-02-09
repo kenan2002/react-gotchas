@@ -1,0 +1,12 @@
+.Counter {
+  border: 2px solid transparent;
+}
+
+.Counter * {
+  display: inline-block;
+  margin: 12px;
+}
+
+.Counter.is-highlighted {
+  border-color: red;
+}
