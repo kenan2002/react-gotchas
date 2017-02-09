@@ -19,7 +19,7 @@ const handleCounterUpdate = function () {
     this._highlight = false;
     this._force = true;
     this.forceUpdate();
-  }, 1000);
+  }, 200);
 };
 
 const renderCounter = function () {

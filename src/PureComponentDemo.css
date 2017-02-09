@@ -1,5 +1,6 @@
 .Counter {
-  border: 2px solid transparent;
+  border: 4px solid transparent;
+  transition: border-color 1s;
 }
 
 .Counter * {
@@ -9,4 +10,5 @@
 
 .Counter.is-highlighted {
   border-color: red;
+  transition: none;
 }
