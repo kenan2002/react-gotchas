@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 
-import './StateLossDemo.css';
+import './Field.css';
 
 class Field extends Component {
   handleRemove = () => {
@@ -34,10 +34,13 @@ class Field extends Component {
       onChange
     } = this.props;
 
+    const id = `field-input-${name}`;
+
     return (
       <div className="Field">
-        <label htmlFor={name}>{name}</label>
+        <label htmlFor={id}>{name}</label>
         <input type="text"
+               id={id}
                name={name}
                value={value}
                onChange={onChange}/>

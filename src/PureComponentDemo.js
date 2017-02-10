@@ -1,7 +1,7 @@
 import React, {Component, PureComponent, PropTypes} from 'react';
 import shallowCompare from 'react-addons-shallow-compare';
 
-import './PureComponentDemo.css';
+import './Counter.css';
 
 const counterPropTypes = {
   id: PropTypes.string.isRequired,

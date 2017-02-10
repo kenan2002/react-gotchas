@@ -1,0 +1,15 @@
+.Field {
+  padding: 6px;
+  border: 4px solid transparent;
+  transition: border-color 1s;
+}
+
+.Field * {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.Field.is-highlighted {
+  border-color: red;
+  transition: none;
+}

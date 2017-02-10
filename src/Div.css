@@ -1,0 +1,9 @@
+.Div {
+  border: 4px solid transparent;
+  transition: border-color 1s;
+}
+
+.Div.is-highlighted {
+  border-color: red;
+  transition: none;
+}
