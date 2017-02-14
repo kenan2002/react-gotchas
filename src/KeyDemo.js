@@ -140,12 +140,58 @@ class IdKey extends PureComponent {
   }
 }
 
+class RandomKey extends PureComponent {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      counters: [0, 1, 2],
+      removeFirst: false
+    }
+  }
+
+  handleToggleFirst = (event) => {
+    this.setState(
+      {
+        removeFirst: event.target.checked
+      }
+    );
+  };
+
+  render() {
+    let counters = Array.from(this.state.counters);
+    const removeFirst = this.state.removeFirst;
+
+    if (removeFirst) {
+      counters.shift();
+    }
+
+    return (
+      <div>
+        <h3>key=random</h3>
+        {
+          counters.map((count) => {
+            return <Counter key={Math.random()} count={count}/>
+          })
+        }
+        <label>
+          <input type="checkbox"
+                 checked={removeFirst}
+                 onChange={this.handleToggleFirst}/>
+          omit first
+        </label>
+      </div>
+    );
+  }
+}
+
 export default class KeyDemo extends PureComponent {
   render() {
     return (
       <div>
         <IndexKey/>
         <IdKey/>
+        <RandomKey/>
       </div>
     );
   }
