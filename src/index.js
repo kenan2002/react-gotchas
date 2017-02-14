@@ -7,6 +7,7 @@ import './index.css';
 import StateLossDemo from './StateLossDemo';
 import PureComponentDemo from './PureComponentDemo';
 import AbstractionDemo from './AbstractionDemo';
+import KeyDemo from './KeyDemo';
 
 function Frame({children}) {
   return (
@@ -16,6 +17,7 @@ function Frame({children}) {
         <Link className="nav-item" to="/state-loss">state loss</Link>
         <Link className="nav-item" to="/pure-component">pure component</Link>
         <Link className="nav-item" to="/abstraction">abstraction</Link>
+        <Link className="nav-item" to="/key">key</Link>
       </header>
       {children}
     </div>
@@ -28,6 +30,7 @@ const router = (
       <Route path="state-loss" component={StateLossDemo}/>
       <Route path="pure-component" component={PureComponentDemo}/>
       <Route path="abstraction" component={AbstractionDemo}/>
+      <Route path="key" component={KeyDemo}/>
     </Route>
   </Router>
 );

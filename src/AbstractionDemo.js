@@ -178,7 +178,7 @@ class PlainDOM extends PureComponent {
 
         <label>
           <input type="checkbox"
-                 value={this.state.hideTitle}
+                 checked={this.state.hideTitle}
                  onChange={this.handleHideTitleChange}/> Hide title
         </label>
       </div>
@@ -228,7 +228,7 @@ class Abstraction extends PureComponent {
                onChange={this.handleFieldChange}/>
         <label>
           <input type="checkbox"
-                 value={this.state.hideTitle}
+                 checked={this.state.hideTitle}
                  onChange={this.handleHideTitleChange}/> Hide title
         </label>
       </div>
